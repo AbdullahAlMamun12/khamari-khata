@@ -4,12 +4,12 @@ import 'package:flutter/material.dart';
 class AppColors{
   static Color get transparent=> const Color(0x00000000);
 
-  static Color get primaryColor => const Color(0xff077946);
-  static Color get secondaryColor => const Color(0xffE73237);
-  static Color get blueDarkColor => const Color(0xff304E60);
-  static Color get blue => const Color(0xff3e63ef);
-  static Color get gray => const Color(0xffC8C8C8);
-  static Color get white => const Color(0xffffffff);
-  static Color get blackColor => const Color(0xff000000);
+  static Color get primary => const Color(0xff004285);
+  static Color get primary100 => const Color(0xff84AED9);
+  static Color get primary200 => const Color(0xffAFC8E4);
+  static Color get primary300 => const Color(0xffDCEBFD);
+  static Color get primary400 => const Color(0xffEBF2FB);
+
+  static Color get white => const Color(0xffFDFDFF);
 }
 

@@ -26,6 +26,7 @@ class AppPages {
       name: _Paths.SPLASH,
       page: () => const SplashView(),
       binding: SplashBinding(),
+      transition: Transition.noTransition,
     ),
     GetPage(
       name: _Paths.LOIGN,

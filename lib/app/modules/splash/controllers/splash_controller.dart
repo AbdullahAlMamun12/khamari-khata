@@ -11,12 +11,12 @@ class SplashController extends GetxController {
   void onReady() {
     super.onReady();
     // Display the splash screen for 2 seconds
-    Future.delayed(const Duration(milliseconds: 1000), () {
+    Future.delayed(const Duration(milliseconds: 2000), () {
 
       if (Utils.localStorage.isLogin) {
         Get.offAndToNamed(Routes.HOME);
       } else {
-        Get.offAndToNamed(Routes.LOGIN);
+        Get.offNamed(Routes.LOGIN);
       }
     });
   }

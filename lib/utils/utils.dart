@@ -16,13 +16,13 @@ class Utils{
         return Theme(
           data: Theme.of(context).copyWith(
             colorScheme: ColorScheme.light(
-              primary: AppColors.primaryColor, // <-- SEE HERE
+              primary: AppColors.primary, // <-- SEE HERE
               onPrimary: AppColors.white, // <-- SEE HERE
-              onSurface: AppColors.blueDarkColor, // <-- SEE HERE
+              onSurface: AppColors.primary, // <-- SEE HERE
             ),
             textButtonTheme: TextButtonThemeData(
               style: TextButton.styleFrom(
-                foregroundColor: AppColors.blueDarkColor, // button text color
+                foregroundColor: AppColors.primary, // button text color
               ),
             ),
           ),
