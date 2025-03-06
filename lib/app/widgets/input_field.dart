@@ -5,6 +5,29 @@ import '../data/colors.dart';
 import '../data/style.dart';
 
 class AppTextField extends TextFormField {
+
+  static InputDecoration inputStyle = InputDecoration(
+      fillColor: AppColors.white,
+      filled: true,
+      hintStyle: Style.textBn16W500,
+      suffixIconConstraints: BoxConstraints(
+          minHeight: 24,
+          minWidth: 24
+      ),
+      contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+      border: OutlineInputBorder(
+        borderSide: BorderSide(color: AppColors.primary, width: 1.5),
+        borderRadius: BorderRadius.circular(15),
+      ),
+      enabledBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: AppColors.primary, width: 1.5),
+        borderRadius: BorderRadius.circular(15),
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: AppColors.primary200, width: 1.5),
+        borderRadius: BorderRadius.circular(15),
+      ));
+
 // Custom constructor that accepts all parameters you need
   AppTextField({
     super.key,
@@ -47,19 +70,8 @@ class AppTextField extends TextFormField {
     super.restorationId,
     String? hintText,
   }) : super(
-          decoration:decoration?? InputDecoration(
-            fillColor: AppColors.white,filled: true,contentPadding: const EdgeInsets.symmetric(horizontal: 12,vertical: 10),
-              border: OutlineInputBorder(
-              borderSide: BorderSide(color: AppColors.primary,width: 1.5),
-              borderRadius: BorderRadius.circular(15),
-          ),
-              focusedBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: AppColors.primary,width: 1.5),
-              borderRadius: BorderRadius.circular(15),
-          ),
-            hintText: hintText
-          ),
-          style: style??Style.text12W300,
+          decoration:decoration ?? inputStyle.copyWith(hintText: hintText),
+          style: style??Style.textBn17W500,
           maxLengthEnforcement: maxLengthEnforced,
         );
 }

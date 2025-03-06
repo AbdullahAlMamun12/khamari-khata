@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 
+import '../data/style.dart';
+
 class AppButton extends StatelessWidget {
   final String? text;
   final VoidCallback? onPressed;
-  const AppButton({super.key, this.text, this.onPressed});
+  final TextStyle? textStyle;
+  const AppButton({super.key, this.text, this.onPressed, this.textStyle});
 
   @override
   Widget build(BuildContext context) {
@@ -34,12 +37,8 @@ class AppButton extends StatelessWidget {
         ),
         child: Center(
           child: Text(
-            'Gradient Button',
-            style: TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.bold,
-              color: Colors.black, // Text color inside the button
-            ),
+            text??"",
+            style: textStyle,
           ),
         ),
       ),

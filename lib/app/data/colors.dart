@@ -10,6 +10,8 @@ class AppColors{
   static Color get primary300 => const Color(0xffDCEBFD);
   static Color get primary400 => const Color(0xffEBF2FB);
 
+  static Color get black => const Color(0xff000000);
+
   static Color get white => const Color(0xffFDFDFF);
 }
 
